@@ -69,8 +69,8 @@ def verify_hmac(raw_body: bytes, provided_signature: str) -> None:
 
 
 @app.get("/health")
-async def health() -> Dict[str, str]:
-    return {"status": "ok"}
+async def health() -> Dict[str, bool]:
+    return {"ok": True}
 
 
 @app.get("/version")
